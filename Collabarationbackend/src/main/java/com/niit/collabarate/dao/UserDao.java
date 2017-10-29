@@ -1,14 +1,13 @@
-package com.niit.collabarate.service;
+package com.niit.collabarate.dao;
 
 import com.niit.collabarate.model.User;
 
-public interface UserService {
+public interface UserDao {
 	boolean isUsernamevalid(String username);
 	boolean registerUser(User user);
 	boolean isEmailvalid(String email);
 	User login(User user);
 	void update(User user);
-	User getUserByUsername(String username);
 	boolean isUpdatedEmailValid(String email,String username);
-
+	User getUserByUsername(String username);
 }

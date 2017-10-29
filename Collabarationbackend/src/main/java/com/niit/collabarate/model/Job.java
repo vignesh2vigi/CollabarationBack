@@ -8,50 +8,41 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name="job_details")
+@Table(name="job")
 public class Job {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int jobId;
-	private String jobtitle; 
-	private String jobdescription; 
-	private String skillsrequired; 
-	private String location; 
-	private String salary; 
-	private String companyname; 
-	private String yearsofexp;
+	private int id;
+	private String jobTitle;
+	private String jobDescription;
+	private String skillsRequired;
+	private String salary;
+	private String location;
+	private String companyname;
 	private Date postedOn;
-	
-	
-	public int getJobId() {
-		return jobId;
+	public int getId() {
+		return id;
 	}
-	public void setJobId(int jobId) {
-		this.jobId = jobId;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getJobtitle() {
-		return jobtitle;
+	public String getJobTitle() {
+		return jobTitle;
 	}
-	public void setJobtitle(String jobtitle) {
-		this.jobtitle = jobtitle;
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
 	}
-	public String getJobdescription() {
-		return jobdescription;
+	public String getJobDescription() {
+		return jobDescription;
 	}
-	public void setJobdescription(String jobdescription) {
-		this.jobdescription = jobdescription;
+	public void setJobDescription(String jobDescription) {
+		this.jobDescription = jobDescription;
 	}
-	public String getSkillsrequired() {
-		return skillsrequired;
+	public String getSkillsRequired() {
+		return skillsRequired;
 	}
-	public void setSkillsrequired(String skillsrequired) {
-		this.skillsrequired = skillsrequired;
-	}
-	public String getLocation() {
-		return location;
-	}
-	public void setLocation(String location) {
-		this.location = location;
+	public void setSkillsRequired(String skillsRequired) {
+		this.skillsRequired = skillsRequired;
 	}
 	public String getSalary() {
 		return salary;
@@ -59,17 +50,17 @@ public class Job {
 	public void setSalary(String salary) {
 		this.salary = salary;
 	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
 	public String getCompanyname() {
 		return companyname;
 	}
 	public void setCompanyname(String companyname) {
 		this.companyname = companyname;
-	}
-	public String getYearsofexp() {
-		return yearsofexp;
-	}
-	public void setYearsofexp(String yearsofexp) {
-		this.yearsofexp = yearsofexp;
 	}
 	public Date getPostedOn() {
 		return postedOn;
@@ -78,6 +69,4 @@ public class Job {
 		this.postedOn = postedOn;
 	}
 	
-	
-
 }

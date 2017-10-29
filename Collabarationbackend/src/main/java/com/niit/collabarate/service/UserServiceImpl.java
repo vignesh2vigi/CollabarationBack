@@ -1,47 +1,45 @@
 package com.niit.collabarate.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.niit.collabarate.dao.UserDAO;
+import com.niit.collabarate.dao.UserDao;
 import com.niit.collabarate.model.User;
 
+@Service
 public class UserServiceImpl implements UserService {
-  @Autowired
-  private UserDAO userDAO;
-	
+@Autowired
+private UserDao userDao;
 	public boolean registerUser(User user) {
-		// TODO Auto-generated method stub
-		return userDAO.registerUser(user);
+		return userDao.registerUser(user);
 	}
-
+	public boolean isUsernamevalid(String username) {
+		// TODO Auto-generated method stub
+		return userDao.isUsernamevalid(username);
+	}
 	
-	public boolean isUsernameValid(String username) {
-		// TODO Auto-generated method stub
-		return userDAO.isvalidusername(username);
+	public boolean isEmailvalid(String email) {
+		return userDao.isEmailvalid(email);
 	}
-
 	
-	public boolean isEmailValid(String email) {
-		// TODO Auto-generated method stub
-		return userDAO.isvalidemail(email);
-	}
-
 	public User login(User user) {
 		// TODO Auto-generated method stub
-		return userDAO.login(user);
+		return userDao.login(user);
 	}
-
-
+	
 	public void update(User user) {
 		// TODO Auto-generated method stub
-		userDAO.updateuser(user);
-
+		 userDao.update(user);
 	}
-
 	
 	public User getUserByUsername(String username) {
 		// TODO Auto-generated method stub
-		return userDAO.getUserbyUsername(username);
+		return userDao.getUserByUsername(username);
+	}
+
+	public boolean isUpdatedEmailValid(String email, String username) {
+		// TODO Auto-generated method stub
+		return userDao.isUpdatedEmailValid(email, username);
 	}
 
 }
