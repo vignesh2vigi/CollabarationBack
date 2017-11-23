@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.collabarate.model.BlogComment;
 import com.niit.collabarate.model.BlogPost;
+import com.niit.collabarate.model.Friend;
 import com.niit.collabarate.model.Job;
 import com.niit.collabarate.model.ProfilePicture;
 import com.niit.collabarate.model.User;
@@ -32,7 +33,7 @@ public class DBConfig {
 			hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");
 			hibernateProperties.setProperty("hibernate.show_sql", "true");
 			lsf.addProperties(hibernateProperties);
-			Class classes[]=new Class[]{User.class,BlogComment.class,BlogPost.class,Job.class,ProfilePicture.class};
+			Class classes[]=new Class[]{User.class,BlogComment.class,BlogPost.class,Job.class,ProfilePicture.class,Friend.class};
 		    return lsf.addAnnotatedClasses(classes).buildSessionFactory();
 		}
 		@Bean
