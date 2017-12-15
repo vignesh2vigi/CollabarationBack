@@ -1,9 +1,12 @@
 package com.niit.collabarate.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.niit.collabarate.dao.UserDao;
+import com.niit.collabarate.model.Job;
 import com.niit.collabarate.model.User;
 
 @Service
@@ -40,6 +43,9 @@ private UserDao userDao;
 	public boolean isUpdatedEmailValid(String email, String username) {
 		// TODO Auto-generated method stub
 		return userDao.isUpdatedEmailValid(email, username);
+	}
+	public List<User> getuser() {
+		return userDao.getuser();
 	}
 
 }

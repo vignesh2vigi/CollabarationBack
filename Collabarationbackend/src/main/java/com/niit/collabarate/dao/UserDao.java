@@ -1,5 +1,8 @@
 package com.niit.collabarate.dao;
 
+import java.util.List;
+
+import com.niit.collabarate.model.Job;
 import com.niit.collabarate.model.User;
 
 public interface UserDao {
@@ -10,4 +13,5 @@ public interface UserDao {
 	void update(User user);
 	boolean isUpdatedEmailValid(String email,String username);
 	User getUserByUsername(String username);
+	List<User>getuser();
 }

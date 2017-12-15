@@ -1,5 +1,7 @@
 package com.niit.collabarate.service;
 
+import java.util.List;
+
 import com.niit.collabarate.model.User;
 
 public interface UserService {
@@ -10,5 +12,5 @@ public interface UserService {
 	void update(User user);
 	User getUserByUsername(String username);
 	boolean isUpdatedEmailValid(String email,String username);
-
+	List<User>getuser();
 }
